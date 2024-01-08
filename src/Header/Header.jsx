@@ -1,7 +1,7 @@
 import "./Header.css";
-
 export const Header = () => {
-  return ( <header>
+  return (
+    <header>
       <div className="contenedor">
         <h2 className="logotipo">Restflix</h2>
         <nav>
@@ -9,14 +9,10 @@ export const Header = () => {
           <a href="#">Programas</a>
           <a href="#">Peliculas</a>
           <a href="#">Novedades</a>
-          <a href="#">Mi lista</a>
+          <a href="#">Mi Lista</a>
         </nav>
       </div>
     </header>
-  
-  )  
+  );
 };
-
 export default Header
-
-
