@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './Header/Header';
-i
+import HomePage from "./HomePage/HomePage"
 
 
 function App() {
