@@ -1,12 +1,11 @@
 .contenedor{
-    background-color: blue;
+   
     width: 90%;
     margin: auto;
 }
 
 
 .contenedor-titulo-controles {
-    background-color: aqua;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -15,7 +14,7 @@
     color: #FFF;
     font-size: 30px;
 }
-.contenedor-titulo-controles .indicadores button {
+ .indicadores button {
     background: #FFF; 
     height: 3px;
     width: 10px;
@@ -23,13 +22,13 @@
     border: none;
     margin-right: 2px;
 }
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button .activo{
+.indicadores button:hover,
+.indicadores button .activo{
     background:red;
 }
 
-.peliculas-recomendadas .contenedor-pelis .flecha-izq,
-.peliculas-recomendadas .contenedor-pelis .flecha-dch {
+ .contenedor-pelis .flecha-izq,
+ .contenedor-pelis .flecha-dch {
     position: absolute;
     border: none;
     background: rgb(0, 0, 0, 0, 3);
@@ -43,34 +42,47 @@
     z-index: 500;
     transition: .2s ease all;
 }
-.peliculas-recomendadas .contenedor-pelis.flecha-izq:hover,
-.peliculas-recomendadas .contenedor-pelis.flecha-dch:hover {
+ .contenedor-pelis.flecha-izq:hover,
+.contenedor-pelis.flecha-dch:hover {
     background: rgb(0, 0, 0, .9);
-} 
-.peliculas-recomendadas .contenedor-pelis .flecha-izq{
+}
+ .contenedor-pelis .flecha-izq{
     left: 0;
 }
-.peliculas-recomendadas .contenedor-pelis .flecha-dch{
+.contenedor-pelis .flecha-dch{
     right: 0;
 
 }
 
 /*-------imagen ----*/
-.peliculas-recomendadas .contenedor-pelis {
-    background-color: red;
+.contenedor-pelis {
+
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
     position: relative;
-    overflow-x: ;
+    overflow:scroll;
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
 }
-.peliculas-recomendadas .contenedor-pelis img {
-   
+.contenedor-carrusel{
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: scroll ;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+ .contenedor-pelis img {
+
     width: 20%;
     padding: 10px;
     cursor: pointer;
@@ -80,7 +92,7 @@
     display: flex;
 
 }
-}
+
 .peliculas-recomendadas img:hover {
     opacity: 0.5;
     transform: scale(1.1);
