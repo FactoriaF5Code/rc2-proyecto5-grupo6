@@ -28,12 +28,24 @@ const Lista = () => {
   );
 
   return (
-    <div className="peliculas-recomendadas contenedor">
-      <div className="contenedor-titulo-controles">
-        {pelis.map((p, i) => (
-          <img key={i} src= {"https://image.tmdb.org/t/p/original" + p.backdrop_path}/> 
-        ))}
-      </div>
+    <div className="peliculas-recomendadas ">
+        <div className="contenedor-titulo-controles">
+          <h3>Peliculas Recomendadas</h3>
+          <div className="indicadores">
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+        <div className="contenedor-pelis ">
+          <button role="button" id="flecha-izq" className="flecha-izq"><i className="fa-solid fa-angle-left"></i></button>
+          <div className="contenedor-carrusel">
+          {pelis.map((p, i) => (
+            <img key={i} src= {"https://image.tmdb.org/t/p/original" + p.backdrop_path}/> 
+          ))}
+          </div>
+          <button role="button" id="flecha-dch" className="flecha-dch"><i className="fa-solid fa-angle-right"></i></button>
+        </div>
+        
     </div>
   );
 };
