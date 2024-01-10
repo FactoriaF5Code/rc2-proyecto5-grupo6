@@ -1,36 +1,33 @@
 
-.imagen-contenedor {
-	width: 1750px;
+/*.imagen-contenedor {
+	width: 100%;
 	height: auto;
 	padding-bottom: 30px;
-}
-
+}*/
 .imagen-principal {
 	width: 100%;
 	height: auto;
-}
-
-.contenido-superpuesto {
+  }
+  
+  .contenido-superpuesto {
 	position: absolute;
-	bottom: 10px;
-	left: 20px;
-	text-align: left;
-	width: 80%;
-	max-width: 800px;
-	padding: 120px;
-	color: white;
-}
+	top: 85%; /* Ajusta según sea necesario */
+	left: 35%; /* Ajusta según sea necesario */
+	transform: translate(-50%, -50%);
+	text-align:left;
+	color: white; /* Ajusta el color del texto según sea necesario */
+  }
 
 .titulo {
-	font-weight: 600;
-	font-size: 2.5rem;
+	font-weight: 500;
+	font-size: 3rem;
 	margin-bottom: 10px;
 	color: white;
 }
 
 .sinopsis {
 	font-weight: normal;
-	font-size: 1.2rem;
+	font-size: 2rem;
 	line-height: 1.6;
 	margin-bottom: 20px;
 	color: white;
@@ -51,4 +48,7 @@
 .boton:hover {
 	background: rgb(250, 247, 247);
 	color: rgb(13, 1, 1);
+}
+.boton i {
+	margin-right: 10px; /* Ajusta el valor según sea necesario */
 }

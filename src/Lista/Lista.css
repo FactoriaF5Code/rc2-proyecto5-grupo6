@@ -1,9 +1,12 @@
 .contenedor {
 
     width: 90%;
-    margin: auto;
+   
 }
-
+.peliculas-recomendadas{
+    margin-left: 40px;
+    margin-right: 40px;
+}
 
 .contenedor-titulo-controles {
     display: flex;
@@ -30,8 +33,8 @@
     background: red;
 }
 
-.contenedor-pelis .flecha-izq,
-.contenedor-pelis .flecha-dch {
+.flecha-izq,
+.flecha-dch {
     position: absolute;
     border: none;
     background: rgb(0, 0, 0, 0, 3);
@@ -46,16 +49,17 @@
     transition: .2s ease all;
 }
 
-.contenedor-pelis.flecha-izq:hover,
-.contenedor-pelis.flecha-dch:hover {
+.flecha-izq:hover,
+.flecha-dch:hover {
     background: rgb(0, 0, 0, .9);
 }
 
-.contenedor-pelis .flecha-izq {
+.flecha-izq {
     left: 0;
+   
 }
 
-.contenedor-pelis .flecha-dch {
+ .flecha-dch {
     right: 0;
 
 }
