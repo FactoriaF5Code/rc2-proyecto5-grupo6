@@ -1,54 +1,54 @@
-.pelicula-principal {
-	color: #fff;
-	display: flex;
-	align-items:center;
-	background-color: red;
+
+.imagen-contenedor {
+	width: 1750px;
+	height: auto;
+	padding-bottom: 30px;
 }
 
-.pelicula-principal .contenedor {
-	margin-bottom: 1em;
-	background-color: blue;
+.imagen-principal {
 	width: 100%;
-	height: 100%;
-	display: flex;
-	
+	height: auto;
 }
 
-.pelicula-principal 
-.contenedor img {
-	width: 100%;
+.contenido-superpuesto {
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	text-align: left;
+	width: 80%;
+	max-width: 800px;
+	padding: 120px;
+	color: white;
 }
-.pelicula-principal .titulo {
+
+.titulo {
 	font-weight: 600;
-	font-size: 3.12em;
-	margin-bottom: 0.4em;
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+	color: white;
 }
 
-.pelicula-principal .sinopsis {
+.sinopsis {
 	font-weight: normal;
-	font-size: 1em;
-	line-height: 1.75em;
-	max-width: 50%;
-	margin-bottom: 1.25em;
+	font-size: 1.2rem;
+	line-height: 1.6;
+	margin-bottom: 20px;
+	color: white;
 }
 
-.pelicula-principal .boton {
-	background: rgba(0,0,0, 0.5);
+.boton {
+	background: rgba(0, 0, 0, 0.5);
 	border: none;
-	border-radius: 0.31em;
-	padding: 0.93em 1.87em;
+	border-radius: 5px;
+	padding: 10px 20px;
 	color: #fff;
-	margin-right: 1.25em;
 	cursor: pointer;
-	transition: .3s ease all;
-	font-size: 1.12em;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	margin-right: 20px;
 }
 
-.pelicula-principal .boton:hover {
-	background: #fff;
-	color: #000;
-}
-
-.pelicula-principal .boton i {
-	margin-right: 1.25em;
+.boton:hover {
+	background: rgb(250, 247, 247);
+	color: rgb(13, 1, 1);
 }

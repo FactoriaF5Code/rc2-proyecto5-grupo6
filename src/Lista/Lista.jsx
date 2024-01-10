@@ -59,6 +59,10 @@ const Lista = () => {
               key={i}
               src={"https://image.tmdb.org/t/p/original" + p.backdrop_path}
             />
+            <img
+              key={i}
+              src={"https://image.tmdb.org/t/p/original" + p.backdrop_path}
+            />
           ))}
         </div>
         <button role="button" id="flecha-dch" className="flecha-dch" onClick={scrollRight}>
@@ -68,5 +72,4 @@ const Lista = () => {
     </div>
   );
 };
-
 export default Lista;

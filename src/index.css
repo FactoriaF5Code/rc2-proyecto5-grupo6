@@ -1,11 +1,10 @@
 :root{
     --rojo: #E50914;
-    --fondo: #141414;
+    --fondo: #000000;
 }
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body{
     background: var(--fondo);
