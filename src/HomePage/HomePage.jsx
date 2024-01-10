@@ -18,7 +18,7 @@ const HomePage = () => {
         };
 
         const response = await fetch(
-          "https://api.themoviedb.org/3/movie/popular",
+          "https://api.themoviedb.org/3/movie/popular?language=es-ES",
           options
         );
         const data = await response.json();
@@ -50,21 +50,24 @@ const HomePage = () => {
       <div className="pelicula-principal">
         <div className="contenedor">
           {currentMovie && (
-            <>
+            <div className="imagen-contenedor">
               <img
-                src={`https://image.tmdb.org/t/p/w500${currentMovie.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop_path}`}
                 alt={currentMovie.title}
+                className="imagen-principal"
               />
-              <h3 className="Titulo">{currentMovie.title}</h3>
-              <p className="sinopsis">{currentMovie.overview}</p>
-            </>
+              <div className="contenido-superpuesto">
+                <h3 className="titulo">{currentMovie.title}</h3>
+                <p className="sinopsis">{currentMovie.overview}</p>
+                <button role="button" className="boton">
+                  <i className="fa-solid fa-play"></i>Reproducir
+                </button>
+                <button role="button" className="boton">
+                  <i className="fa-light fa-circle-info"></i>Más información
+                </button>
+              </div>
+            </div>
           )}
-          <button role="button" className="boton">
-            <i className="fa-solid fa-play"></i>Reproducir
-          </button>
-          <button role="button" className="boton">
-            <i className="fa-light fa-circle-info"></i>Más información
-          </button>
         </div>
       </div>
     </main>

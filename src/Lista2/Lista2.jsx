@@ -1,7 +1,7 @@
-import "./Lista.css";
-import { useEffect, useState, useRef } from "react";
+import "./Lista2.css";
+import { useEffect, useState, useRef} from "react";
 
-const Lista = () => {
+const Lista2 = () => {
   const [pelis, setPelis] = useState([]);
   const carouselRef = useRef (null);
   const scrollLeft = () => {
@@ -14,6 +14,7 @@ const Lista = () => {
       carouselRef.current.scrollLeft += 2500;
     }
   };
+
   useEffect(() => {
     const apiKey =
       "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZDAwMzk5MWRkMTFkMzY5Y2U2OWQ0ODkxZDE1YmRlMSIsInN1YiI6IjY1OTNlYzUyZmMzMWQzNzBlYzQ2ZmM1MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CFkBpo0cM0ZyQGFUvgQSZB2w-CfEYCd2n0s1BA23peI";
@@ -25,7 +26,7 @@ const Lista = () => {
       },
     };
     fetch(
-      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&page=1&sort_by=popularity.desc",
+      "https://api.themoviedb.org/3/movie/top_rated?language=es-ES&page=1",
       options
     )
       .then((response) => response.json())
@@ -35,19 +36,14 @@ const Lista = () => {
   return (
     <div className="peliculas-recomendadas ">
       <div className="contenedor-titulo-controles">
-        <h3>Peliculas Recomendadas</h3>
+        <h3>Los Mas Valorados</h3>
         <div className="indicadores">
           <button></button>
           <button></button>
         </div>
       </div>
-      <div className="contenedor-pelis ">
-        <button
-          role="button"
-          id="flecha-izq"
-          className="flecha-izq"
-          onClick={scrollLeft}
-        >
+      <div className="contenedor-pelis">
+        <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}>
           <i className="fa-solid fa-angle-left"></i>
         </button>
         <div className="contenedor-carrusel" ref={carouselRef}>
@@ -58,16 +54,11 @@ const Lista = () => {
             />
           ))}
         </div>
-        <button
-          role="button"
-          id="flecha-dch"
-          className="flecha-dch"
-          onClick={scrollRight}
-        >
+        <button role="button" id="flecha-dch" className="flecha-dch" onClick={scrollRight}>
           <i className="fa-solid fa-angle-right"></i>
         </button>
       </div>
     </div>
   );
 };
-export default Lista;
+export default Lista2;
