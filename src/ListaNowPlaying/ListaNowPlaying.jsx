@@ -1,7 +1,7 @@
-import "./Lista.css";
+import "./ListaNowPlaying.css";
 
 import { useEffect, useState, useRef } from "react";
-const Lista = () => {
+const ListaNowPlaying = () => {
   const [pelis, setPelis] = useState([]);
   const carouselRef = useRef(null);
 
@@ -29,13 +29,9 @@ const Lista = () => {
         },
       };
       // descargarse la lista de pelis
-      fetch(
-        "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&page=1&sort_by=popularity.desc",
-        options
-      )
-        .then((response) => response.json())
-        // guardarlas en el estado usando setPelis()
-        .then((respuesta) => setPelis(respuesta.results));
+      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+      .then(response => response.json())
+      .then((respuesta) => setPelis(respuesta.results));
     },
     []
   );
@@ -43,7 +39,7 @@ const Lista = () => {
   return (
     <div className="peliculas-recomendadas ">
       <div className="contenedor-titulo-controles">
-        <h3>Peliculas Recomendadas</h3>
+        <h3>Now Playing</h3>
         <div className="indicadores">
           <button></button>
           <button></button>
@@ -69,4 +65,4 @@ const Lista = () => {
   );
 };
 
-export default Lista;
+export default ListaNowPlaying;
