@@ -1,7 +1,7 @@
-import "./ListaNowPlaying.css";
+import "./Lista1.css";
 
 import { useEffect, useState, useRef } from "react";
-const ListaNowPlaying = () => {
+const Lista1 = () => {
   const [pelis, setPelis] = useState([]);
   const carouselRef = useRef(null);
 
@@ -65,4 +65,4 @@ const ListaNowPlaying = () => {
   );
 };
 
-export default ListaNowPlaying;
+export default Lista1;
