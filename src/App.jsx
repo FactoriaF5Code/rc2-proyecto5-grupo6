@@ -4,6 +4,8 @@ import HomePage from './HomePage/HomePage';
 import Lista from './Lista/Lista';
 import ListaNowPlaying from "./ListaNowPlaying/ListaNowPlaying";
 import Lista2 from "./Lista2/Lista2";
+import Lista3 from "./Lista3/Lista3";
+
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Lista />
       <ListaNowPlaying />
       <Lista2 />
+      <Lista3 />
+      
     </div>
   );
 }
