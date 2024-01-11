@@ -1,22 +1,24 @@
-
 .imagen-principal {
 	width: 100%;
 	height: auto;
-  }
-  .contenido-superpuesto {
+}
+
+.contenido-superpuesto {
 	position: absolute;
-	top: 85%; 
-	left: 35%; 
+	top: 85%;
+	left: 35%;
 	transform: translate(-50%, -50%);
-	text-align:left;
-	color: white; 
-  }
+	text-align: left;
+	color: white;
+}
+
 .titulo {
 	font-weight: 500;
 	font-size: 3rem;
 	margin-bottom: 10px;
 	color: white;
 }
+
 .sinopsis {
 	font-weight: normal;
 	font-size: 2rem;
@@ -36,10 +38,12 @@
 	transition: color 0.3s ease;
 	margin-right: 20px;
 }
+
 .boton:hover {
 	background: rgb(250, 247, 247);
 	color: rgb(13, 1, 1);
 }
+
 .boton i {
-	margin-right: 10px; 
+	margin-right: 10px;
 }

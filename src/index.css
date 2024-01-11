@@ -1,12 +1,14 @@
-:root{
+:root {
     --rojo: #E50914;
     --fondo: #000000;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background: var(--fondo);
     font-family: 'Open Sans', sans-serif;
 }

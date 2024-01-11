@@ -1,9 +1,9 @@
 import "./Lista.css";
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 
 const Lista2 = () => {
   const [pelis, setPelis] = useState([]);
-  const carouselRef = useRef (null);
+  const carouselRef = useRef(null);
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollLeft -= 2500;
@@ -39,7 +39,12 @@ const Lista2 = () => {
         <h3>Los Mas Valorados</h3>
       </div>
       <div className="contenedor-pelis">
-        <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}>
+        <button
+          role="button"
+          id="flecha-izq"
+          className="flecha-izq"
+          onClick={scrollLeft}
+        >
           <i className="fa-solid fa-angle-left"></i>
         </button>
         <div className="contenedor-carrusel" ref={carouselRef}>
@@ -50,7 +55,12 @@ const Lista2 = () => {
             />
           ))}
         </div>
-        <button role="button" id="flecha-dch" className="flecha-dch" onClick={scrollRight}>
+        <button
+          role="button"
+          id="flecha-dch"
+          className="flecha-dch"
+          onClick={scrollRight}
+        >
           <i className="fa-solid fa-angle-right"></i>
         </button>
       </div>

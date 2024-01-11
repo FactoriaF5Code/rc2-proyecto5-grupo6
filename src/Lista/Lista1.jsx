@@ -7,17 +7,17 @@ const Lista1 = () => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft -= 2500; // Adjust the scroll distance based on your design
+      carouselRef.current.scrollLeft -= 2500; 
     }
   };
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft += 2500; // Adjust the scroll distance based on your design
+      carouselRef.current.scrollLeft += 2500; 
     }
   };
 
   useEffect(
-    /*Cargar las pelis */
+   
     () => {
       const apiKey =
         "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZDAwMzk5MWRkMTFkMzY5Y2U2OWQ0ODkxZDE1YmRlMSIsInN1YiI6IjY1OTNlYzUyZmMzMWQzNzBlYzQ2ZmM1MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CFkBpo0cM0ZyQGFUvgQSZB2w-CfEYCd2n0s1BA23peI";
@@ -28,7 +28,7 @@ const Lista1 = () => {
           Authorization: `Bearer ${apiKey}`,
         },
       };
-      // descargarse la lista de pelis
+      
       fetch(
         "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
         options

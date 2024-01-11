@@ -5,8 +5,6 @@ const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [movieIndex, setMovieIndex] = useState(0);
 
-
-
   useEffect(() => {
     const fetchMovies = async () => {
       try {
@@ -47,30 +45,31 @@ const HomePage = () => {
 
   const currentMovie = movies[movieIndex];
 
-  function truncate(str,n) {
-    return str?.length > n ? str.substr(0, n - 1) + "...": str;
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
 
   return (
     <main>
-          {currentMovie && (
-            <div className="imagen-contenedor">
-              <img src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop_path}`}
-                alt={currentMovie.title} className="imagen-principal"/>
-              <div className="contenido-superpuesto">
-                <h3 className="titulo">{currentMovie.title}</h3>
-                <p className="sinopsis">
-                   {truncate(currentMovie?.overview, 150)}
-                   </p>
-                <button role="button" className="boton">
-                  <i className="fa-solid fa-play"></i>Reproducir
-                </button>
-                <button role="button" className="boton">
-                  <i className="fa-light fa-circle-info"></i>Más información
-                </button>
-              </div>
-            </div>
-          )}
+      {currentMovie && (
+        <div className="imagen-contenedor">
+          <img
+            src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop_path}`}
+            alt={currentMovie.title}
+            className="imagen-principal"
+          />
+          <div className="contenido-superpuesto">
+            <h3 className="titulo">{currentMovie.title}</h3>
+            <p className="sinopsis">{truncate(currentMovie?.overview, 150)}</p>
+            <button role="button" className="boton">
+              <i className="fa-solid fa-play"></i>Reproducir
+            </button>
+            <button role="button" className="boton">
+              <i className="fa-light fa-circle-info"></i>Más información
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
