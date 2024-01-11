@@ -1,4 +1,4 @@
-import "./Lista2.css";
+import "./Lista.css";
 import { useEffect, useState, useRef} from "react";
 
 const Lista2 = () => {
@@ -37,10 +37,6 @@ const Lista2 = () => {
     <div className="peliculas-recomendadas ">
       <div className="contenedor-titulo-controles">
         <h3>Los Mas Valorados</h3>
-        <div className="indicadores">
-          <button></button>
-          <button></button>
-        </div>
       </div>
       <div className="contenedor-pelis">
         <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}>

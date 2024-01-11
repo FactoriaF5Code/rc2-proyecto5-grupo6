@@ -44,10 +44,6 @@ const Lista = () => {
     <div className="peliculas-recomendadas ">
       <div className="contenedor-titulo-controles">
         <h3>Peliculas Recomendadas</h3>
-        <div className="indicadores">
-          <button></button>
-          <button></button>
-        </div>
       </div>
       <div className="contenedor-pelis ">
         <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}>

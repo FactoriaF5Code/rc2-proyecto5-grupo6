@@ -1,4 +1,4 @@
-import "./Lista3.css";
+import "./Lista";
 import { useEffect, useState, useRef} from "react";
 
 const Lista3 = () => {
@@ -37,10 +37,6 @@ const Lista3 = () => {
     <div className="peliculas-recomendadas ">
       <div className="contenedor-titulo-controles">
         <h3>Proximos Extrenos</h3>
-        <div className="indicadores">
-          <button></button>
-          <button></button>
-        </div>
       </div>
       <div className="contenedor-pelis">
         <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}>
@@ -48,10 +44,7 @@ const Lista3 = () => {
         </button>
         <div className="contenedor-carrusel" ref={carouselRef}>
           {pelis.map((p, i) => (
-            <img
-              key={i}
-              src={"https://image.tmdb.org/t/p/original" + p.backdrop_path}
-            />
+            <img key={i} src={"https://image.tmdb.org/t/p/original" + p.backdrop_path}/>
           ))}
         </div>
         <button role="button" id="flecha-dch" className="flecha-dch" onClick={scrollRight}>

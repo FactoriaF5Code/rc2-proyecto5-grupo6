@@ -1,4 +1,4 @@
-import "./Lista1.css";
+import "./Lista.css";
 
 import { useEffect, useState, useRef } from "react";
 const Lista1 = () => {
@@ -29,9 +29,12 @@ const Lista1 = () => {
         },
       };
       // descargarse la lista de pelis
-      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
-      .then(response => response.json())
-      .then((respuesta) => setPelis(respuesta.results));
+      fetch(
+        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+        options
+      )
+        .then((response) => response.json())
+        .then((respuesta) => setPelis(respuesta.results));
     },
     []
   );
@@ -39,27 +42,16 @@ const Lista1 = () => {
   return (
     <div className="peliculas-recomendadas ">
       <div className="contenedor-titulo-controles">
-        <h3>Now Playing</h3>
-        <div className="indicadores">
-          <button></button>
-          <button></button>
-        </div>
+        <h3>Vistas Recientemente</h3>
       </div>
       <div className="contenedor-pelis ">
-        <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}>
-          <i className="fa-solid fa-angle-left"></i>
-        </button>
+        <button role="button" id="flecha-izq" className="flecha-izq" onClick={scrollLeft}><i className="fa-solid fa-angle-left"></i></button>
         <div className="contenedor-carrusel" ref={carouselRef}>
           {pelis.map((p, i) => (
-            <img
-              key={i}
-              src={"https://image.tmdb.org/t/p/original" + p.backdrop_path}
-            />
+            <img key={i} src={"https://image.tmdb.org/t/p/original" + p.backdrop_path}/>
           ))}
         </div>
-        <button role="button" id="flecha-dch" className="flecha-dch" onClick={scrollRight}>
-          <i className="fa-solid fa-angle-right"></i>
-        </button>
+        <button role="button" id="flecha-dch" className="flecha-dch" onClick={scrollRight}><i className="fa-solid fa-angle-right"></i> </button>
       </div>
     </div>
   );

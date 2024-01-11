@@ -17,10 +17,11 @@
 .contenedor-titulo-controles h3 {
     color: #FFF;
     font-size: 30px;
+    padding-left: 20px;
 }
 
 .indicadores button {
-    background: #FFF;
+    
     height: 3px;
     width: 10px;
     cursor: pointer;
@@ -37,7 +38,7 @@
 .flecha-dch {
     position: absolute;
     border: none;
-    background: rgb(0, 0, 0, 0, 3);
+   background: transparent;
     font-size: 40px;
     height: 50%;
     top: calc(50%-25%);
@@ -47,19 +48,19 @@
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
+   
 }
 
 .flecha-izq:hover,
 .flecha-dch:hover {
-    background: rgb(0, 0, 0, .9);
+    background: rgba(43, 43, 43, 0.9);
 }
 
 .flecha-izq {
     left: 0;
-   
 }
 
- .flecha-dch {
+.flecha-dch {
     right: 0;
 
 }
@@ -90,6 +91,7 @@
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
+    max-height:200px ;
 }
 
 .contenedor-pelis img {
@@ -116,7 +118,7 @@
     margin: 0 10px;
 }
 
-.flecha-izq,
+.flecha-izq
 .flecha-dch {
     position: absolute;
     top: 50%;
